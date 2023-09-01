@@ -31,7 +31,7 @@ class ProfileCotroller extends Controller
              $request->image->move($path, $name);
              $image = $name;
          }else{
-            dd('hi');
+            dd('there is an error');
          }
         $user->image = $image;
         $user->name = $request->name;

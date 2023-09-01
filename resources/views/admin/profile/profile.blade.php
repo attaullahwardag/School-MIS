@@ -14,6 +14,7 @@
                 <h6 class="widget-user-desc">User Role: {{  $user->usertype }}</h6>
                 <h6 class="widget-user-desc">User Role: {{  $user->email }}</h6>
             </div>
+
             <div class="widget-user-image">
                 <img class="rounded-circle" src="{{ url('/upload/'.$user->image) }}" alt="User Avatar">
             </div>
