@@ -14,10 +14,10 @@
            <div class="box-body">
              <div class="row">
                <div class="col">
-                   <form action="{{ route('store.user') }}" method="post" novalidate>
+                   <form action="{{ route('student.class.store') }}" method="post" novalidate>
                     @csrf
                      <div class="row">
-                       <div class="col-6">						
+                       <div class="col-12">						
                            <div class="form-group">
                             <h5>Class Name <span class="text-danger">*</span></h5>
                             <div class="controls">

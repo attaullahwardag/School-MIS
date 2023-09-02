@@ -8,7 +8,7 @@
             <div class="box">
                <div class="box-header with-border">
                  <h3 class="box-title"> Class List </h3>
-                 <a href="" class="btn btn-md btn-success float-right"> <i class="fa fa-user-o"> </i> Add Class</a>
+                 <a href="{{ route('student.class.add') }}" class="btn btn-md btn-primary float-right">  Add New Class</a>
                </div>
                <!-- /.box-header -->
                <div class="box-body">

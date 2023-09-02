@@ -45,6 +45,8 @@ Route::group(['prefix' => 'profile', 'middleware' => 'auth'], function () {
 Route::group(['prefix' => 'setup', 'middleware' => 'auth'], function () {
     Route::get('student/class/view', [StudentClassController::class, 'ViewStudentClass'] )->name('student.class.view');
     Route::get('student/class/add', [StudentClassController::class, 'AddStudentClass'] )->name('student.class.add');
+    Route::post('student/class/store', [StudentClassController::class, 'StoreStudentClass'] )->name('student.class.store');
+
     //Route::get('/eidt/{id}', [ProfileCotroller::class, 'editprofile']) -> name('edit.profile');
     //Route::put('/update/{id}', [ProfileCotroller::class, 'updateprofile']) -> name('update.profile');
     //Route::get('/delete/{id}', [UserController::class, 'deleteuser']) -> name('delete.user');
