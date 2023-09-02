@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\home;
 use App\Http\Controllers\Backend\ProfileCotroller;
+use App\Http\Controllers\Backend\Setup\StudentClassController;
 
 
 /*
@@ -38,6 +39,14 @@ Route::group(['prefix' => 'profile', 'middleware' => 'auth'], function () {
     Route::get('/view', [ProfileCotroller::class, 'viewprofile'] )->name('view.profile');
     Route::get('/eidt/{id}', [ProfileCotroller::class, 'editprofile']) -> name('edit.profile');
     Route::put('/update/{id}', [ProfileCotroller::class, 'updateprofile']) -> name('update.profile');
+    //Route::get('/delete/{id}', [UserController::class, 'deleteuser']) -> name('delete.user');
+});
+// Student Class management routes 
+Route::group(['prefix' => 'setup', 'middleware' => 'auth'], function () {
+    Route::get('student/class/view', [StudentClassController::class, 'ViewStudentClass'] )->name('student.class.view');
+    Route::get('student/class/add', [StudentClassController::class, 'AddStudentClass'] )->name('student.class.add');
+    //Route::get('/eidt/{id}', [ProfileCotroller::class, 'editprofile']) -> name('edit.profile');
+    //Route::put('/update/{id}', [ProfileCotroller::class, 'updateprofile']) -> name('update.profile');
     //Route::get('/delete/{id}', [UserController::class, 'deleteuser']) -> name('delete.user');
 });
 

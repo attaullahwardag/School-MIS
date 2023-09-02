@@ -9,8 +9,11 @@ use App\Models\StudentClass;
 class StudentClassController extends Controller
 {
     //
-    public function ViewStudent(){
+    public function ViewStudentClass(){
         $data['allData'] = StudentClass::all();
-        return view('admin.setup.student_class.students_view');
+        return view('admin.setup.student_class.student_class_view', $data);
+    }
+    public function AddStudentClass(){
+        return view('admin.setup.student_class.student_class_add');
     }
 }
