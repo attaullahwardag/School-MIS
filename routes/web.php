@@ -46,6 +46,8 @@ Route::group(['prefix' => 'setup', 'middleware' => 'auth'], function () {
     Route::get('student/class/view', [StudentClassController::class, 'ViewStudentClass'] )->name('student.class.view');
     Route::get('student/class/add', [StudentClassController::class, 'AddStudentClass'] )->name('student.class.add');
     Route::post('student/class/store', [StudentClassController::class, 'StoreStudentClass'] )->name('student.class.store');
+    Route::get('student/class/edit/{id}', [StudentClassController::class, 'EditStudentClass'] )->name('student.class.edit');
+    Route::put('student/class/update/{id}', [StudentClassController::class, 'UpdateStudentClass'] )->name('student.class.update');
 
     //Route::get('/eidt/{id}', [ProfileCotroller::class, 'editprofile']) -> name('edit.profile');
     //Route::put('/update/{id}', [ProfileCotroller::class, 'updateprofile']) -> name('update.profile');

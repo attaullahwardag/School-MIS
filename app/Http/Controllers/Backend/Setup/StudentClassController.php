@@ -29,4 +29,18 @@ class StudentClassController extends Controller
     	);
         return redirect()->route('student.class.view')->with($notification);
     }
+    public function EditStudentClass($id){
+        $class = StudentClass::find($id);
+        return view('admin.setup.student_class.student_class_edit', compact('class'));
+    }
+    public function UpdateStudentClass(Request $request, $id){
+        $class = StudentClass::find($id);
+        $class->name = $request->name;
+        $class->update();
+        $notification = array(
+    		'message' => 'Student Class Successfully Added',
+    		'alert-type' => 'success',
+    	);
+        return redirect()->route('student.class.view')->with($notification);
+    }
 }

@@ -27,7 +27,7 @@
                                <td>{{ $key+1 }} </td>
                                <td>{{ $class->name }}</td>
                                <td>
-                                <a href="" class="btn btn-md btn-info">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="{{ route('student.class.edit', $class->id) }}" class="btn btn-md btn-info">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 <a href="" class="btn btn-md btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                </td>
                         @endforeach
