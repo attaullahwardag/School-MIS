@@ -9,6 +9,6 @@ class home extends Controller
     // 
     public function welcome (){
         $ijaz = ['computer','mobile','watch'];
-        return view ('policy', compact('ijaz'));
+        return view ('welcome', compact('ijaz'));
     }
 }

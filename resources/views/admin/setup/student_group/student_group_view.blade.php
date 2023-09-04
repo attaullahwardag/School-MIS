@@ -7,8 +7,8 @@
         <div class="col-12">
             <div class="box">
                <div class="box-header with-border">
-                 <h3 class="box-title"> Class List </h3>
-                 <a href="{{ route('student.class.add') }}" class="btn btn-md btn-primary float-right">  Add New Class</a>
+                 <h3 class="box-title"> Student Group List </h3>
+                 <a href="{{ route('student.group.add') }}" class="btn btn-md btn-primary float-right">  Add New Class</a>
                </div>
                <!-- /.box-header -->
                <div class="box-body">
@@ -17,18 +17,18 @@
                        <thead>
                            <tr>
                                <th>Sn</th>
-                               <th>Class Name</th>
+                               <th>Group</th>
                                <th>Action</th>
                            </tr>
                        </thead>
                        <tbody>
-                        @foreach ($allData as $key => $class )
+                        @foreach ($allData as $key => $group )
                            <tr>
                                <td>{{ $key+1 }} </td>
-                               <td>{{ $class->name }}</td>
+                               <td>{{ $group->name }}</td>
                                <td>
-                                <a href="{{ route('student.class.edit', $class->id) }}" class="btn btn-md btn-info">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                <a href="{{ route('student.class.delete', $class->id) }}" class="btn btn-md btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                <a href="{{ route('student.group.edit', $group->id) }}" class="btn btn-md btn-info">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="{{ route('student.group.delete', $group->id) }}" class="btn btn-md btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                </td>
                         @endforeach
                        </tbody>

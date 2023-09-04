@@ -42,7 +42,7 @@
             <li><a href="{{ route('user.add') }}"><i class="ti-more"></i>Add User</a></li>
           </ul>
         </li> 
-        <li class="treeview">
+        <li class="treeview {{ ($prefix == '/setup')?'active': '' }}">
           <a href="#">
             <i data-feather="settings"></i> <span>Setup Management</span>
             <span class="pull-right-container">
@@ -51,8 +51,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>View Student Class</a></li>
-            <li><a href="{{ route('student.class.add') }}"><i class="ti-more"></i>Add New Class</a></li>
-            <li><a href="mailbox_read_mail.html"><i class="ti-more"></i>Read</a></li>
+            <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>View Student Year</a></li>
+            <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>View Student Groups</a></li>
           </ul>
         </li> 		  
         

@@ -43,4 +43,13 @@ class StudentClassController extends Controller
     	);
         return redirect()->route('student.class.view')->with($notification);
     }
+    public function DeleteStudentClass($id){
+        StudentClass::where('id', $id)->delete();
+        $notification = array(
+    		'message' => 'Student Class Deleted Successfully',
+    		'alert-type' => 'success',
+    	);
+        return redirect()->route('student.class.view')->with($notification);
+
+    }
 }
