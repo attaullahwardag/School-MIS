@@ -9,6 +9,8 @@ use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
 use App\Http\Controllers\Backend\Setup\StudentShiftController;
+use App\Http\Controllers\Backend\Setup\FeeCatagoryController;
+
 
 
 
@@ -71,12 +73,20 @@ Route::group(['prefix' => 'setup', 'middleware' => 'auth'], function () {
     Route::get('student/group/delete/{id}', [StudentGroupController::class, 'DeleteStudentGroup'] )->name('student.group.delete');
 
 // Student Shift management routes 
-Route::get('student/shift/view', [StudentShiftController::class, 'ViewStudentShift'] )->name('student.shift.view');
-Route::get('student/shift/add', [StudentShiftController::class, 'AddStudentShift'] )->name('student.shift.add');
-Route::post('student/shift/store', [StudentShiftController::class, 'StoreStudentShift'] )->name('student.shift.store');
-Route::get('student/shift/edit/{id}', [StudentShiftController::class, 'EditStudentShift'] )->name('student.shift.edit');
-Route::put('student/shift/update/{id}', [StudentShiftController::class, 'UpdateStudentShift'] )->name('student.shift.update');
-Route::get('student/shift/delete/{id}', [StudentShiftController::class, 'DeleteStudentShift'] )->name('student.shift.delete');
+    Route::get('student/shift/view', [StudentShiftController::class, 'ViewStudentShift'] )->name('student.shift.view');
+    Route::get('student/shift/add', [StudentShiftController::class, 'AddStudentShift'] )->name('student.shift.add');
+    Route::post('student/shift/store', [StudentShiftController::class, 'StoreStudentShift'] )->name('student.shift.store');
+    Route::get('student/shift/edit/{id}', [StudentShiftController::class, 'EditStudentShift'] )->name('student.shift.edit');
+    Route::put('student/shift/update/{id}', [StudentShiftController::class, 'UpdateStudentShift'] )->name('student.shift.update');
+    Route::get('student/shift/delete/{id}', [StudentShiftController::class, 'DeleteStudentShift'] )->name('student.shift.delete');
+
+// Student Shift management routes 
+    Route::get('fee/catagory/view', [FeeCatagoryController::class, 'ViewFeeCatagory'] )->name('fee.catagory.view');
+    Route::get('fee/catagory/add', [FeeCatagoryController::class, 'AddFeeCatagory'] )->name('fee.catagory.add');
+    Route::post('fee/catagory/store', [FeeCatagoryController::class, 'StoreFeeCatagory'] )->name('fee.catagory.store');
+    Route::get('fee/catagory/edit/{id}', [FeeCatagoryController::class, 'EditFeeCatagory'] )->name('fee.catagory.edit');
+    Route::put('fee/catagory/update/{id}', [FeeCatagoryController::class, 'UpdateFeeCatagory'] )->name('fee.catagory.update');
+    Route::get('fee/catagory/delete/{id}', [FeeCatagoryController::class, 'DeleteFeeCatagory'] )->name('fee.catagory.delete');
 });
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'] )->name('admin.logout');

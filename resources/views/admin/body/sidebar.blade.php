@@ -50,10 +50,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>View Student Class</a></li>
+            <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>View Student Classes</a></li>
             <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>View Student Year</a></li>
             <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>View Student Groups</a></li>
-            <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>View Student Shift</a></li>
+            <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>View Student Shifts</a></li>
+            <li><a href="{{ route('fee.catagory.view') }}"><i class="ti-more"></i>View Fee Catagories</a></li>
+
           </ul>
         </li> 		  
         
