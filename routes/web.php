@@ -41,11 +41,10 @@ Route::group(['prefix' => 'users', 'middleware' => 'auth'], function () {
     Route::get('/delete/{id}', [UserController::class, 'deleteuser']) -> name('delete.user');
 });
 // Profile management routes 
-Route::group(['prefix' => 'profile', 'middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'profile', 'middleware' => 'auth'], function () {
     Route::get('/view', [ProfileCotroller::class, 'viewprofile'] )->name('view.profile');
     Route::get('/eidt/{id}', [ProfileCotroller::class, 'editprofile']) -> name('edit.profile');
     Route::put('/update/{id}', [ProfileCotroller::class, 'updateprofile']) -> name('update.profile');
-    //Route::get('/delete/{id}', [UserController::class, 'deleteuser']) -> name('delete.user');
 });
 // Student Class management routes 
 Route::group(['prefix' => 'setup', 'middleware' => 'auth'], function () {
@@ -80,13 +79,22 @@ Route::group(['prefix' => 'setup', 'middleware' => 'auth'], function () {
     Route::put('student/shift/update/{id}', [StudentShiftController::class, 'UpdateStudentShift'] )->name('student.shift.update');
     Route::get('student/shift/delete/{id}', [StudentShiftController::class, 'DeleteStudentShift'] )->name('student.shift.delete');
 
-// Student Shift management routes 
+// Student fee catagory routes 
     Route::get('fee/catagory/view', [FeeCatagoryController::class, 'ViewFeeCatagory'] )->name('fee.catagory.view');
     Route::get('fee/catagory/add', [FeeCatagoryController::class, 'AddFeeCatagory'] )->name('fee.catagory.add');
     Route::post('fee/catagory/store', [FeeCatagoryController::class, 'StoreFeeCatagory'] )->name('fee.catagory.store');
     Route::get('fee/catagory/edit/{id}', [FeeCatagoryController::class, 'EditFeeCatagory'] )->name('fee.catagory.edit');
     Route::put('fee/catagory/update/{id}', [FeeCatagoryController::class, 'UpdateFeeCatagory'] )->name('fee.catagory.update');
     Route::get('fee/catagory/delete/{id}', [FeeCatagoryController::class, 'DeleteFeeCatagory'] )->name('fee.catagory.delete');
+
+// Student Fee amount routes 
+    Route::get('fee/amount/view', [FeeAmountController::class, 'ViewFeeAmount'] )->name('fee.amount.view');
+    Route::get('fee/amount/add', [FeeAmountController::class, 'AddFeeAmount'] )->name('fee.amount.add');
+    Route::post('fee/amount/store', [FeeAmountController::class, 'StoreFeeAmount'] )->name('fee.amount.store');
+    Route::get('fee/amount/edit/{id}', [FeeAmountController::class, 'EditFeeAmount'] )->name('fee.amount.edit');
+    Route::put('fee/amount/update/{id}', [FeeAmountController::class, 'UpdateFeeAmount'] )->name('fee.amount.update');
+    Route::get('fee/amount/delete/{id}', [FeeAmountController::class, 'DeleteFeeAmount'] )->name('fee.amount.delete');
+
 });
 
 Route::get('/admin/logout', [AdminController::class, 'Logout'] )->name('admin.logout');
