@@ -1,6 +1,5 @@
 @extends('admin.admin_master')
 @section('admin_content')
-
 <div class="content-wrapper">
     <div class="container-full">
       <!-- Main content -->
@@ -23,9 +22,9 @@
                                 <h5>Fee Catagory <span class="text-danger">*</span></h5>
                                 <div class="controls">
                                     <input type="text" name="name" value="{{ $fee_catagory->name }}" class="form-control" required data-validation-required-message="This field is required"> 
-                                        @if ($errors->has('name'))
-                                            <span class="text-danger">{{ $errors->first('name') }}</span>
-                                        @endif
+                                      @if ($errors->has('name'))
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                      @endif
                                 </div>
                            </div>
                        </div>
