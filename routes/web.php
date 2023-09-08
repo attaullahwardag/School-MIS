@@ -10,6 +10,8 @@ use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
 use App\Http\Controllers\Backend\Setup\StudentShiftController;
 use App\Http\Controllers\Backend\Setup\FeeCatagoryController;
+use App\Http\Controllers\Backend\Setup\FeeAmountController;
+
 
 
 
