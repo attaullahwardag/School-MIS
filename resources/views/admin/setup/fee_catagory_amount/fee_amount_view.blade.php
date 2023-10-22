@@ -25,10 +25,10 @@
                         @foreach ($allData as $key => $fee_amount )
                            <tr>
                                <td>{{ $key+1 }} </td>
-                               <td>{{ $fee_amount->fee_catagory_id }}</td>
+                               <td>{{ $fee_amount['fee_amount']['name'] }}</td>
                                <td>
-                                <a href="{{ route('fee.catagory.edit', $fee_amount->id) }}" class="btn btn-md btn-info">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                <a href="{{ route('fee.catagory.delete', $fee_amount->id) }}" class="btn btn-md btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                <a href="" class="btn btn-md btn-info">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <a href="" class="btn btn-md btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                </td>
                         @endforeach
                        </tbody>
@@ -49,7 +49,6 @@
     </div>
 </div>
 @endsection 
-
 @section('datatable_scripts');
 <script src="{{ asset('assets/icons/feather-icons/feather.min.js') }}"></script>	
 <script src="{{ asset('assets/vendor_components/datatable/datatables.min.js') }}"></script>
